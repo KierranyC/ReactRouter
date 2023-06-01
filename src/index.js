@@ -28,6 +28,8 @@ const Main = (props) => {
 
         <div id='navbar'>
           {/* navigation here */}
+          <Link to= "/red">Go to Red</Link>
+          <Link to="/blue">Go to Blue</Link>
         </div>
 
         <div id='main-section'>
@@ -36,6 +38,9 @@ const Main = (props) => {
             <Blue />
           </Route>
           <Route path="/red">
+            <Red />
+          </Route>
+          <Route exact path="/">
             <Red />
           </Route>
         </div>
