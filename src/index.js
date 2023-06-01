@@ -1,6 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-/* checking*/
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom/cjs/react-router-dom.min';
+
+
 const Red = (props) => {
   return (
     <div className='red'>
@@ -19,16 +23,24 @@ const Blue = (props) => {
 
 const Main = (props) => {
   return (
-    <div id='container'>
+    <BrowserRouter>
+      <div id='container'>
 
-      <div id='navbar'>
-        {/* navigation here */}
-      </div>
+        <div id='navbar'>
+          {/* navigation here */}
+        </div>
 
-      <div id='main-section'>
-        {/* routes here */}
+        <div id='main-section'>
+          {/* routes here */}
+          <Route path="/blue">
+            <Blue />
+          </Route>
+          <Route path="/red">
+            <Red />
+          </Route>
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   )
 }
 
