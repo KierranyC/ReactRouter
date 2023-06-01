@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
+/* checking*/
 const Red = (props) => {
   return (
     <div className='red'>
